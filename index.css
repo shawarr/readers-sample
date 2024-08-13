@@ -1,12 +1,12 @@
 /* Resetting the box model */
 * {
     box-sizing: border-box;
+    font-family:'Times New Roman', Times, serif;
+
 }
 
 /* General body styling */
 body {
-    font-family: 'Roboto', Arial, sans-serif;
-    margin: 0;
     background-color: #f4f4f4;
 }
 
@@ -60,7 +60,7 @@ img.header-icon:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 2rem 0;
+    padding: 4rem 0;
 }
 
 .readers-fully-booked {
@@ -72,7 +72,7 @@ img.header-icon:hover {
 }
 
 .readers-fully-booked .logo {
-    width: 6em;
+    width: 7em;
 }
 
 /* Search bar styling */
@@ -86,17 +86,17 @@ img.header-icon:hover {
 
 #searchQueryInput {
     width: 100%;
-    max-width: 50rem;
-    height: 2.8rem;
+    max-width: 60rem;
+    height: 3em;
     background: #f5f5f5;
     border-radius: 1.625rem;
-    padding: 0 3.5rem 0 1.5rem;
-    font-size: 1rem;
+    padding: 0 1.5rem 0 1.5rem;
+    font-size: 1.5rem;
     margin: 0 1rem;
-    border-color:red
+    border-color:red;
 }
 #searchQueryInput:active{
-    color:red
+    border-color:white;
 }
 #searchQuerySubmit {
     width: 3.5rem;
@@ -118,6 +118,8 @@ img.header-icon:hover {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-left:2em;
+
 }
 
 .shopping-cart img {
@@ -136,6 +138,7 @@ img.header-icon:hover {
     margin: 40px auto;
     overflow: hidden;
     border-radius: 10px;
+    padding:1em;
     border: 3px solid rgba(255, 0, 0, 0.548);
 }
 
@@ -163,22 +166,7 @@ img.header-icon:hover {
 }
 
 /* Navigation controls */
-.carousel-control {
-    position: absolute;
-    top: 50%;
-    width: 50px;
-    height: 50px;
-    color: red;
-    text-align: center;
-    line-height: 50px;
-    font-size: 30px;
-    cursor: pointer;
-    border-radius: 50%;
-    user-select: none;
-    transform: translateY(-50%);
-    background: none;
-    border: none;
-}
+
 
 .prev {
     left: 10px;
@@ -245,7 +233,7 @@ img.header-icon:hover {
 
 .prev {
     left: 10px;
-    text-decoration: none;
+    text-decoration:none;
 }
 
 .next {
@@ -291,6 +279,7 @@ body {
     background-color: white;
 }
 
+
 .navbar-logo img {
     width: 30%;
     margin-left: 2rem;
@@ -332,5 +321,83 @@ body {
 
 .navbar-collapse li{
     margin-left:2rem;
+}
+
+.titles{
+    background: linear-gradient(to right, red 0%, white 20% , white 100%);
+    margin: 4em;
+    border-radius:0.5rem;
+    padding:2em;
+
+}
+.titles h1{
+color:black;
+margin:2rem;
+text-align:center;
+font-size:3em;
+font-weight: 550;
+
+}
+
+.titles a:visited{
+    text-decoration: none;
+}
+.titles a:active{
+    text-decoration: none;
+}
+.titles a:hover{
+    text-decoration: none;
+    color:black;
+   
+}
+.titles a{
+    text-decoration: none;
+    color:black;
+    
+}
+.MultiCarousel { float: left; overflow: hidden; padding: 15px; width: 100%; position:relative; }
+    .MultiCarousel .MultiCarousel-inner { transition: 1s ease all; float: left; }
+        .MultiCarousel .MultiCarousel-inner .item { float: left;}
+        .MultiCarousel .MultiCarousel-inner .item > div { text-align: center; padding:10px; margin:10px; background:#f1f1f1; color:#666;}
+    .MultiCarousel .leftLst, .MultiCarousel .rightLst { position:absolute; border-radius:50%;top:calc(50% - 20px); }
+    .MultiCarousel .leftLst { left:0; }
+    .MultiCarousel .rightLst { right:0; }
+    
+        .MultiCarousel .leftLst.over, .MultiCarousel .rightLst.over { pointer-events: none; background:#ccc; }
+
+.item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Ensures the image covers the container without stretching */
+    display: block; /* Removes any inline element gaps */
+}
+.item {
+    overflow: hidden; /* Prevents any overflow outside the container */
+    display: flex;
+    align-items: center; /* Centers the image vertically */
+    justify-content: center; /* Centers the image horizontally */
+}
+
+.item {
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .item img {
+        height: 100%;
+    
+    }
+}
+#title{
+ font-weight:550;
+ font-size:larger;
+}
+#author{
+    font-size:larger;
+
+}
+#price{
+color:red;
+font-size:medium;
 }
 
