@@ -1,23 +1,24 @@
 /* Resetting the box model */
 * {
     box-sizing: border-box;
-    font-family:'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
 
 }
 
 /* General body styling */
 body {
-    background-color: #f4f4f4;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: white;
 }
 
 /* Header styling */
 .index-header {
     background-color: rgba(216, 213, 213, 0.877);
     width: 100%;
-    margin: 0;
+    display: flex;
     justify-content: space-between;
     align-items: center;
-    display: flex;
     position: fixed;
     top: 0;
     z-index: 1000;
@@ -33,21 +34,33 @@ body {
 
 .header-left li, .header-right li {
     margin-right: 1em;
+    font-size:smaller;
 }
 
 .header-icons a {
     text-decoration: none;
-    color:white;
+    color: white;
 }
+img.header-right{
+    width:1.5em !important;
 
+}
+img.giftcard{
+width:1.5em !important;
+margin:auto;
+padding-top:0.7em;
+}
 img.header-icon {
     width: 2em;
     transition: filter 0.3s ease;
-      filter: invert(100%) grayscale(100%);
+    filter: invert(100%) grayscale(100%);
 }
 
 img.header-icon:hover {
-           filter: invert(0%) grayscale(0%);
+    filter: invert(0%) grayscale(0%);
+}
+img.fb{
+    width:2.5em !important;
 }
 
 .header-icons a:hover {
@@ -67,8 +80,7 @@ img.header-icon:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 1rem;
-    margin-top: 2rem;
+    margin: 2rem 0 1rem;
 }
 
 .readers-fully-booked .logo {
@@ -90,14 +102,17 @@ img.header-icon:hover {
     height: 3em;
     background: #f5f5f5;
     border-radius: 1.625rem;
-    padding: 0 1.5rem 0 1.5rem;
+    padding: 0 1.5rem;
     font-size: 1.5rem;
     margin: 0 1rem;
-    border-color:red;
+    border: 2px solid red;
+    transition: border-color 0.3s ease;
 }
-#searchQueryInput:active{
-    border-color:white;
+
+#searchQueryInput:active {
+    border-color: white;
 }
+
 #searchQuerySubmit {
     width: 3.5rem;
     height: 2.8rem;
@@ -118,8 +133,7 @@ img.header-icon:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left:2em;
-
+    margin-left: 2em;
 }
 
 .shopping-cart img {
@@ -130,156 +144,48 @@ img.header-icon:hover {
 .shopping-cart img:hover {
     filter: grayscale(0%);
 }
-
-/* Carousel styling */
-.carousel {
-    position: relative;
-    width: 95%;
-    margin: 40px auto;
-    overflow: hidden;
-    border-radius: 10px;
-    padding:1em;
-    border: 3px solid rgba(255, 0, 0, 0.548);
+.category-head{
+    color:red !important;
+    text-decoration:underline;
+}
+.nav-link:active{
+    color:Red !important;
+}
+.nav-link:focus{
+    color:white !important;
+}
+.nav-link::after{
+    color:Red;
+}
+@media (max-width:1024px){
+.dropdown-menu{
+   position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0; /* Ensure it stretches to the full width of the navbar */
+    box-shadow: 0 8px rgba(228, 215, 215, 0.2);
+    width: auto; /* Use auto width to prevent overflow */
+    max-width: 100%; /* Ensure it doesn’t extend beyond the viewport */
+    padding: 0; /* Remove padding if it causes overflow */
+    margin-right:6%; /* Remove margin if it causes overflow */
+    padding-right:6%;
+    
+}
+.navbar{
+    overflow:hidden;
+}
+.navbar-collapse{
+    overflow:hidden;
+}
+}
+.dropdown-menu{
+    box-shadow: 0 8px 10px red;
+}
+.dropdown-menu a:hover{
+    color:white;
 }
 
-.carousel-inner {
-    display: flex;
-    transition: transform 0.5s ease-in-out; /* Transition for sliding effect */
-}
-
-.carousel-item {
-    min-width: 100%;
-    flex-shrink: 0;
-    opacity: 0;
-    transition: opacity 1s ease-in-out; /* Smooth opacity transition */
-}
-
-.carousel-item.active {
-    opacity: 1;
-}
-
-.carousel-item img {
-    width: 100%;
-    height: auto; /* Maintain aspect ratio */
-    object-fit: contain;
-    border-radius: 10px;
-}
-
-/* Navigation controls */
-
-
-.prev {
-    left: 10px;
-    text-decoration: none;
-}
-
-.next {
-    right: 10px;
-    text-decoration: none;
-}
-
-/* Carousel styling */
-.carousel {
-    position: relative;
-    width: 95%;
-    margin: 40px auto;
-    overflow: hidden;
-    border-radius: 10px;
-    border:none;
-}
-
-.carousel-inner {
-    display: flex;
-    transition: transform 0.5s ease-in-out; /* Transition for sliding effect */
-}
-
-.carousel-item {
-    min-width: 100%;
-    flex-shrink: 0;
-    opacity: 0;
-    transition: opacity 1s ease-in-out, transform 1s ease-in-out; /* Smooth opacity and sliding transition */
-    transform: scale(0.95); /* Start with a slight scale down for transition effect */
-}
-
-.carousel-item.active {
-    opacity: 1;
-    transform: scale(1); /* Scale up to normal size */
-}
-
-.carousel-item img {
-    width: 100%;
-    height: auto; /* Maintain aspect ratio */
-    object-fit: contain;
-    border-radius: 10px;
-}
-
-/* Navigation controls */
-.carousel-control {
-    position: absolute;
-    top: 50%;
-    width: 50px;
-    height: 50px;
-    color: red;
-    text-align: center;
-    line-height: 50px;
-    font-size: 30px;
-    cursor: pointer;
-    border-radius: 50%;
-    user-select: none;
-    transform: translateY(-50%);
-    background: none;
-    border: none;
-}
-
-.prev {
-    left: 10px;
-    text-decoration:none;
-}
-
-.next {
-    right: 10px;
-    text-decoration: none;
-}
-
-/* Dot styling */
-.carousel-dots {
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
-    background-color: rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    padding: 5px 10px;
-}
-
-.dot {
-    display: inline-block;
-    width: 15px;
-    height: 15px;
-    margin: 5px;
-    background-color: red;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: background-color 0.6s ease;
-}
-
-.dot.active {
-    background-color: #717171;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Roboto', Arial, sans-serif;
-    background-color: white;
-}
-
-
+/* Navbar styling */
 .navbar-logo img {
     width: 30%;
     margin-left: 2rem;
@@ -296,108 +202,197 @@ body {
 
 .nav-link {
     color: white;
-
 }
-.nav-link:hover{
-    color:red;
+
+.nav-link:hover {
+    color: red;
 }
 
 .nav-link:focus,
-.nav-link:active
- {
+.nav-link:active {
     color: white;
-}
-.dropdown-menu {
-    background-color: #343a40; /* Background color for dropdown */
 }
 
 .dropdown-item {
-    color: white; /* Text color for dropdown items */
+    color: white; /* Dropdown item text color */
 }
 
 .dropdown-item:hover {
-    background-color: #495057; /* Hover color for dropdown items */
+    background-color: #495057; /* Dropdown item hover color */
 }
 
-.navbar-collapse li{
-    margin-left:2rem;
+.navbar-collapse li {
+    margin-left: 2rem;
 }
 
-.titles{
-    background: linear-gradient(to right, red 0%, white 20% , white 100%);
+/* Titles section styling */
+.titles {
+    background: linear-gradient(to right, red 0%, white 20%, white 100%);
     margin: 4em;
-    border-radius:0.5rem;
+    border-radius: 0.5rem;
+    padding: 2em;
+    padding-bottom: 4em;
+}
+
+.titles h1 {
+    color: black;
+    margin: 2rem;
+    text-align: center;
+    font-size: 3em;
+    font-weight: 550;
+}
+
+.titles a {
+    text-decoration: none;
+    color: black;
+}
+
+.titles a:hover {
+    color: black;
+}
+
+#title {
+    font-weight: 550;
+    text-align: center;
+}
+
+#author {
+    font-size: larger;
+}
+
+#price {
+    color: red;
+    font-size: medium;
+}
+
+/* Slick Slider styling */
+#slick {
+    display: none;
     padding:2em;
-
-}
-.titles h1{
-color:black;
-margin:2rem;
-text-align:center;
-font-size:3em;
-font-weight: 550;
-
 }
 
-.titles a:visited{
-    text-decoration: none;
-}
-.titles a:active{
-    text-decoration: none;
-}
-.titles a:hover{
-    text-decoration: none;
-    color:black;
-   
-}
-.titles a{
-    text-decoration: none;
-    color:black;
-    
-}
-.MultiCarousel { float: left; overflow: hidden; padding: 15px; width: 100%; position:relative; }
-    .MultiCarousel .MultiCarousel-inner { transition: 1s ease all; float: left; }
-        .MultiCarousel .MultiCarousel-inner .item { float: left;}
-        .MultiCarousel .MultiCarousel-inner .item > div { text-align: center; padding:10px; margin:10px; background:#f1f1f1; color:#666;}
-    .MultiCarousel .leftLst, .MultiCarousel .rightLst { position:absolute; border-radius:50%;top:calc(50% - 20px); }
-    .MultiCarousel .leftLst { left:0; }
-    .MultiCarousel .rightLst { right:0; }
-    
-        .MultiCarousel .leftLst.over, .MultiCarousel .rightLst.over { pointer-events: none; background:#ccc; }
-
-.item img {
-    width: 100%;
-    height: auto;
-    object-fit: cover; /* Ensures the image covers the container without stretching */
-    display: block; /* Removes any inline element gaps */
-}
-.item {
-    overflow: hidden; /* Prevents any overflow outside the container */
-    display: flex;
-    align-items: center; /* Centers the image vertically */
-    justify-content: center; /* Centers the image horizontally */
+#slick.slick-initialized {
+    display: block;
 }
 
-.item {
-    height: auto;
+#slick .slick-list {
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+#slick .slick-slide {
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+#slick .slick-slide:focus {
+    outline: none;
+    cursor: grab;
+}
+#slick2 {
+    display: none;
+    padding:2em;
+}
+
+#slick2.slick-initialized {
+    display: block;
+}
+
+#slick2 .slick-list {
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+#slick2 .slick-slide {
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+#slick2 .slick-slide:focus {
+    outline: none;
+    cursor: grab;
+}
+
+
+#slick2 .slick-prev {
+    left: -30px;
+    background-image: url('https://i.imgur.com/ao7qeXi.png');
+}
+
+#slick2 .slick-next {
+    right: -30px;
+    background-image: url('https://i.imgur.com/AhkEkP6.png');
+}
+
+.slide p, h5, h4 {
+    text-align: center;
+}
+
+/* Responsive styles */
+@media (max-width: 480px) {
+    .titles h1 {
+        font-size: large;
+    }
+}
+@media (max-width: 1024px) {
+    #slick .slide {
+        padding: 0 10px;
+    }
 }
 
 @media (max-width: 768px) {
-    .item img {
-        height: 100%;
-    
+    #slick .slide {
+        padding: 0 5px;
     }
 }
-#title{
- font-weight:550;
- font-size:larger;
+
+@media (max-width: 480px) {
+    #slick .slide {
+        padding: 0 2px;
+    }
+
+    #slick .slide img {
+        width: 100%;
+        height: auto;
+    }
+
+    #title, #authors, #price {
+        font-size: 1rem;
+    }
+
+    #title {
+        font-size: 1.2rem;
+    }
+    
+    #price {
+        font-size: 1rem;
+        color: red;
+    }
 }
-#author{
-    font-size:larger;
+
+/* General styling for the carousel container */
+#top-carousel {
+    position: relative;
+    width: 100%; /* Ensure it takes full width */
+    overflow: hidden; /* Hide overflow for neatness */
+    margin-top:2em;
+}
+
+#top-carousel .slick-slide {
+    display: flex; /* Flexbox to align slides properly */
+    justify-content: center; /* Center slide content */
+}
+
+#top-carousel .slick-slide img {
+    width: 100%; /* Make images responsive */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.titles2{
+    width:100% !important;
+    max-width:100% !important;
+    margin:0 !important;
+    padding-left:0 !important;
+    padding-right:0 !important;
 
 }
-#price{
-color:red;
-font-size:medium;
-}
-
