@@ -293,27 +293,35 @@
             $('#slick').slick({
                 slidesToShow: 6,
                 slidesToScroll: 1,
-                dots: false,
+                dots: true,
                 autoplay: true,
                 autoplaySpeed: 5000,
-                arrows: false,
+                arrows: true,
                 responsive: [
                     {
                         breakpoint: 1024, // Tablets
                         settings: {
-                            slidesToShow:3
+                            slidesToShow:3,
+                            dots:false,
+                            arrows:false
+                          
                         }
+                       
                     },
                     {
                         breakpoint: 768, // Small devices
                         settings: {
-                            slidesToShow:2
+                            slidesToShow:2,
+                            dots:false,
+                            arrows:false
                         }
                     },
                     {
                         breakpoint: 480, // Mobile Devices
                         settings: {
-                            slidesToShow: 1
+                            slidesToShow: 1,
+                            dots:false,
+                            arrows:false,
                         }
                     }
                 ]
