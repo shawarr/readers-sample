@@ -435,9 +435,11 @@ img.fb{
 #mobileCarousel .slick-prev:before{
 color:red !important;
 padding-left:1em;
+    background-image: none !important;
 }
 #mobileCarousel .slick-next:before{
     margin-left:-1.2em;
+    background-image:none !important;
 }
 
 
