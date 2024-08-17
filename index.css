@@ -228,7 +228,7 @@ img.fb{
 /* Titles section styling */
 .titles {
     background: linear-gradient(to right, red 0%, white 20%, white 100%);
-    margin: 4em;
+    margin: 1em;
     border-radius: 0.5rem;
     padding: 2em;
     padding-bottom: 4em;
@@ -269,6 +269,7 @@ img.fb{
 #slick {
     display: none;
     padding:2em;
+    
 }
 
 #slick.slick-initialized {
@@ -375,7 +376,8 @@ img.fb{
     position: relative;
     width: 100%; /* Ensure it takes full width */
     overflow: hidden; /* Hide overflow for neatness */
-    margin-top:5em;
+    margin-top:2em;
+
 }
 
 #top-carousel .slick-slide {
@@ -394,5 +396,49 @@ img.fb{
     margin:0 !important;
     padding-left:0 !important;
     padding-right:0 !important;
+    height:2.5em;
+    font-size:small;
+}
+.titles2 h1{
+    margin:Auto;
+}
+
+
+@media screen and (min-width:1024){
+    #mobileCarousel{
+        display:none;
+    }
+    #desktopCarousel{
+        display:block;
+    }
+
 
 }
+
+@media screen and (max-width:1024){
+    #mobileCarousel{
+        display:block;
+        
+    }
+    #desktopCarousel{
+        display:none;
+    }
+}
+
+.slick-prev:before{
+    color:white !important;
+}
+.slick-next:before{
+    color:red !important
+}
+
+#mobileCarousel .slick-prev:before{
+color:red !important;
+padding-left:1em;
+}
+#mobileCarousel .slick-next:before{
+    margin-left:-1.2em;
+}
+
+
+
