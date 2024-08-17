@@ -109,9 +109,9 @@
     </div>
 </div>
     
+<div class="container d-none d-lg-block" id="desktopCarousel">
     <div class="titles">
-        <h1><a href="#">New Titles</a></h1>
-        <div class="container mt-3">
+        <h1><a href="#" id="desktopCarousel">New Titles</a></h1>
             <div id="slick">
                 <div class="slide">
                     <img src="images/1984.jpg" class="w-100 img-fluid" />
@@ -185,12 +185,12 @@
             </div>
         </div>
     </div>
-    <br><br><br><br><br><br><br><br>  <br><br><br><br><br><br><br><br>  <br><br><br><br><br><br><br><br>
-<div class="container">
+
+<div class="container d-lg-none" id="mobileCarousel">
  <div class="titles titles2">
         <h1><a href="#">New Titles</a></h1>
         </div>
-        </div>
+       
            <div class="container mt-3">
             <div id="slick2">
                 <div class="slide">
@@ -264,6 +264,7 @@
                
             </div>
         </div>
+        </div>
     
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -286,6 +287,8 @@
         arrows: true,   // Show navigation arrows
         centerMode: true, // Center the current slide
         centerPadding: '0', // No padding on sides
+        fade:true,
+        cssEase: 'linear',
     
     });
 });
@@ -319,7 +322,7 @@
                     {
                         breakpoint: 480, // Mobile Devices
                         settings: {
-                            slidesToShow: 1,
+                            slidesToShow: 2,
                             dots:false,
                             arrows:false,
                         }
@@ -334,7 +337,8 @@
                 dots: false,
                 autoplay: true,
                 autoplaySpeed: 5000,
-                arrows: false,
+                arrows: true,
+
                 responsive: [
                     {
                         breakpoint: 1024, // Tablets
@@ -351,12 +355,29 @@
                     {
                         breakpoint: 480, // Mobile Devices
                         settings: {
-                            slidesToShow: 1
+                            slidesToShow: 2
                         }
                     }
                 ]
             });
         });
+$(document).ready(function() {
+    function checkBreakpoint() {
+        if ($(window).width() < 1024) {
+            $('#desktopCarousel').hide();   // Hide desktop carousel
+            $('#mobileCarousel').show();    // Show mobile carousel
+        } else {
+            $('#desktopCarousel').show();   // Show desktop carousel
+            $('#mobileCarousel').hide();    // Hide mobile carousel
+        }
+    }
+
+    // Run the function on page load
+    checkBreakpoint();
+
+    // Run the function whenever the window is resized
+    $(window).resize(checkBreakpoint);
+});
     </script>
 </body>
 </html>
