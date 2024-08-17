@@ -69,7 +69,7 @@ img.fb{
 
 /* Wrapper styling */
 .wrapper {
-    width: 100%;
+    width: 55%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -80,7 +80,7 @@ img.fb{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 2rem 0 1rem;
+    margin: 1rem 0 1rem;
 }
 
 .readers-fully-booked .logo {
@@ -180,9 +180,14 @@ img.fb{
 }
 .dropdown-menu{
     box-shadow: 0 8px 10px red;
+    padding-right:1.5em;
+
 }
 .dropdown-menu a:hover{
     color:white;
+    margin-left:0.5em;
+    background-color:grey;
+
 }
 
 /* Navbar styling */
@@ -228,10 +233,10 @@ img.fb{
 /* Titles section styling */
 .titles {
     background: linear-gradient(to right, red 0%, white 20%, white 100%);
-    margin: 1em;
     border-radius: 0.5rem;
-    padding: 2em;
+    padding:3em;
     padding-bottom: 4em;
+    
 }
 
 .titles h1 {
@@ -398,11 +403,14 @@ img.fb{
     padding-right:0 !important;
     height:2.5em;
     font-size:small;
+    padding-bottom:7em;
 }
 .titles2 h1{
     margin:Auto;
 }
-
+.titles{
+    margin-bottom: 2em;
+}
 
 @media screen and (min-width:1024){
     #mobileCarousel{
@@ -415,6 +423,7 @@ img.fb{
 
 }
 
+
 @media screen and (max-width:1024){
     #mobileCarousel{
         display:block;
@@ -423,6 +432,10 @@ img.fb{
     #desktopCarousel{
         display:none;
     }
+}
+#desktopCarousel {
+    margin: 0 auto;
+    width:85%;
 }
 
 .slick-prev:before{
@@ -435,12 +448,17 @@ img.fb{
 #mobileCarousel .slick-prev:before{
 color:red !important;
 padding-left:1em;
-    background-image: none !important;
+background-image:none !important;
+background-color:white !important;
 }
 #mobileCarousel .slick-next:before{
     margin-left:-1.2em;
     background-image:none !important;
+    background-color:white !important;
 }
-
+.slick-prev, .slick-next {
+    background: none !important; /* Remove any background applied */
+    border: none; /* If there's any border causing the issue */
+}
 
 
