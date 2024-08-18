@@ -69,7 +69,7 @@ img.fb{
 
 /* Wrapper styling */
 .wrapper {
-    width: 55%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -90,7 +90,7 @@ img.fb{
 /* Search bar styling */
 .searchBar {
     width: 100%;
-    max-width: 60rem;
+    max-width: 100%;;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -320,9 +320,24 @@ img.fb{
 }
 
 
-#slick2 .slick-prev {
-    left: -30px;
-    background-image: url('https://i.imgur.com/ao7qeXi.png');
+#slick2 .slick-prev  {
+    background: none;
+    color: #fff; /* Change the color if necessary */
+    font-size: 20px;
+}
+
+#slick2 .slick-prev::before {
+    content: '◀';
+    font-size: 20px;
+}
+#slick2 .slick-next  {
+    background: none;
+    font-size: 20px;
+}
+
+#slick2 .slick-next::before {
+    content: '▶';
+    font-size: 20px;
 }
 
 #slick2 .slick-next {
@@ -401,9 +416,8 @@ img.fb{
     margin:0 !important;
     padding-left:0 !important;
     padding-right:0 !important;
-    height:2.5em;
-    font-size:small;
-    padding-bottom:7em;
+    font-size:large;
+
 }
 .titles2 h1{
     margin:Auto;
