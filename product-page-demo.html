@@ -12,7 +12,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css" />
 
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="product-demo.css">
 </head>
+
 <body>
     <!-- Header -->
     <header class="index-header container-fluid bg-dark">
@@ -76,7 +78,7 @@
                     </ul>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="product-page-demo.html">Example 2</a>
+                    <a class="nav-link" href="#">Example 2</a>
                 </li>
                  <li class="nav-item">
                     <a class="nav-link" href="#">Example 3</a>
@@ -94,71 +96,78 @@
         </div>
     </nav>
 
-    <!-- Carousel -->
-    <div id="top-carousel" class="slick-slider">
-        <div><img src="images/readersDiscountCarousel1.jpg" alt="Image 1"></div>
-        <div><img src="images/readersDiscountCarousel2.jpg" alt="Image 2"></div>
-        <div><img src="images/readersDiscountCarousel3.jpg" alt="Image 3"></div>
-    </div>
-    <!-- New Titles Carousel-->
-  
-    <div class="container-fluid">
-        <div>
-            <h1 class="category-carousel"><a href="#"><em>New Titles</em></a></h1>
-        </div>
-        <div class="container mt-3 carousel-items">
-            <div id="slick2">
-                <!-- Slides -->
-            </div>
-        </div>
-    </div>
-<!-- TODO (MAKE A CATEGORY CAROUSEL WITH A DISTINCTIVE LOOK HERE LATER)-->
-  <div container-fluid mt-2>
-    <h1 class="category-carousel"><em>Discover Local Authors!<em></em></h1>
-  </div>
-  <div id="local-authors" class="slick-slider">
-        <div><img src="images/localauthors1.jpg" alt="Image 1"></div>
-        <div><img src="images/localauthors2.jpg" alt="Image 2"></div>
-        <div><img src="images/localauthors3.jpg" alt="Image 3"></div>
+
+     <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Slick Carousel -->
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+
+    <div class="product-window container-fluid">    
+            <div id="product-image">
+                <img src="images/1984.jpg" alt="">
+              
+              
+              </div>    
     </div>
 
-    <!-- Little Readers Carousel-->
-      <div class="container-fluid"></div>
-        <div>
-            <h1 class="category-carousel"><a href="#"><em>Little Readers</em></a></h1>
-        </div>
-        <div class="container mt-3 carousel-items">
-            <div id="little-readers">
-                <!-- Slides -->
-            </div>
-        </div>
-    </div>
-    <!-- Readers Recommends Carousel-->
-<div class="container-fluid"></div>
-        <div>
-            <h1 class="category-carousel"><a href="#"><em>Readers Recommends</em></a></h1>
-        </div>
-        <div class="container mt-3 carousel-items">
-            <div id="recommends">
-                <!-- Slides -->
-            </div>
-        </div>
-    </div>
+          <div id="product-authors" class="container-fluid">
+                <h1 style="text-align:center">1984: Nineteen Eighty-Four</h1>
+            
+              <a href="#"> <h5 style="display: inline-flexbox">George Orwell</h5></a>
+              </div>
 
-    <!--BookTok Carousel-->
-<div class="container-fluid"></div>
-        <div>
-            <h1 class="category-carousel"><a href="#"><em>BookTok</em></a></h1>
+
+    <div id="product-details" class="bg-dark mx-5 my-4 row justify-content-center">
+        <div id="year" class="col-4 text-center">
+            <p class="mb-0">2008</p>
+            <h6 class="mb-0">Year</h6>
         </div>
-        <div class="container mt-3 carousel-items">
-            <div id="booktok">
-                <!-- Slides -->
-            </div>
+        <div id="stock" class="col-4 text-center">
+            <p class="mb-0">In  Stock</p>
+        
+        </div>
+        <div id="pages" class="col-4 text-center">
+            <p class="mb-0">336</p>
+            <h6 class="mb-0">Total Pages</h6>
         </div>
     </div>
+<div class="container">
+    <div class="row justify-content-between align-items-start">
+        <!-- Flex container for the title and cart -->
+        <div class="col-12 d-flex flex-row justify-content-between align-items-start description-cart-container">
+            <!-- Description Title Section -->
+            <div class="description-title">
+                <h1>Description</h1>
+            </div>
 
-    <!-- TODO Instagram Embeds-->
-    <!--Footer-->
+            <!-- Add to Cart Section -->
+            <div class="cart-container">
+                <button id="decrease" class="qty-btn">-</button>
+                <span id="quantity">1</span>
+                <button id="increase" class="qty-btn">+</button>
+                <button id="add-to-cart">
+                    <i class="cart-icon">&#128722;</i>
+                    <span id="priceButton">10.00 JOD</span>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Description Text Section -->
+        <div class="col-12">
+            <p class="description-text">
+              Winston Smith works for the Ministry of Truth in London, chief city of Airstrip One. Big Brother stares out from every poster, the Thought Police uncover every act of betrayal. When Winston finds love with Julia, he discovers that life does not have to be dull and deadening, and awakens to new possibilities. Despite the police helicopters that hover and circle overhead, Winston and Julia begin to question the Party; they are drawn towards conspiracy. Yet Big Brother will not tolerate dissent - even in the mind. For those with original thoughts they invented Room 101. . .
+            </p>
+        </div>
+    </div>
+</div>
+
+
+    
+</div>
+  <!--Footer-->
     <footer class="bg-dark">
   <div class="footer-nav">
     <ul>
@@ -215,120 +224,29 @@
     <p>Copyright © 2023 <strong>Readers Bookshop</strong>. All Rights Reserved.</p>
   </div>
 </footer>
-    <!-- jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <!-- Bootstrap JavaScript -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Slick Carousel -->
-    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <script>
-        $(document).ready(function(){
-            $('#top-carousel').slick({
-                slidesToShow: 1,  
-                slidesToScroll: 1,
-                dots: true,     
-                autoplay: true, 
-                autoplaySpeed: 5000, 
-                arrows: true,   
-                centerMode: true,
-                centerPadding: '0',
-                fade: true,
-                cssEase: 'linear',
-            });
-               $('#local-authors').slick({
-                slidesToShow: 1,  
-                slidesToScroll: 1,
-                dots: true,     
-                autoplay: true, 
-                autoplaySpeed: 5000, 
-                arrows: true,   
-                centerMode: true,
-                centerPadding: '0',
-                fade: true,
-                cssEase: 'linear',
-            });
+
+<script>
+    let quantity = 1;
+    const pricePerItem = 10.00;
+
+    document.getElementById("increase").addEventListener("click", function() {
+        quantity++;
+        updatePrice();
+    });
+
+    document.getElementById("decrease").addEventListener("click", function() {
+        if (quantity > 1) {
+            quantity--;
+            updatePrice();
+        }
+    });
+
+    function updatePrice() {
+        document.getElementById("quantity").textContent = quantity;
+        document.getElementById("priceButton").textContent = `${quantity * pricePerItem} JOD`;
+    }
+</script>
+
+    </body>
+    </html>
     
-
-            $('#slick2, #little-readers, #recommends, #booktok').slick({
-                slidesToShow: 6,
-                slidesToScroll: 1,
-                dots: true,
-                autoplay: true,
-                autoplaySpeed: 5000,
-                arrows: true,
-                responsive: [
-                    {
-                        breakpoint: 1024, 
-                        settings: {
-                            slidesToShow: 4,
-                            dots: false,
-                            arrows: true,
-                        }
-                    },
-                    {
-                        breakpoint: 768,  
-                        settings: {
-                            slidesToShow: 3,
-                            dots:false,
-                            arrows: true,
-                        }
-                    }
-                ]
-            });
-        });
-         $(document).ready(function() {
-      // Apply Slick settings to all carousels with the 'carousel' class
-      $('.categories-carousel').slick({
-        infinite: true,
-        slidesToShow: 4,  // Default number of slides to show
-        slidesToScroll: 1,
-        arrows: true,    // Display navigation arrows
-        dots: false,     // Dots pagination (set to true if needed)
-        responsive: [
-          {
-            breakpoint: 1024, // For tablet and smaller devices
-            settings: {
-              slidesToShow: 2,
-              slidesToScroll: 1
-            }
-          },
-          {
-            breakpoint: 600,  // For mobile devices
-            settings: {
-              slidesToShow: 1,
-              slidesToScroll: 1
-            }
-          }
-        ]
-      });
-    });
-        $(document).ready(function() {
-    var books = [
-        { title: '1984', author: 'George Orwell', price: 'JOD 10.00', img: 'images/1984.jpg' },
-        { title: "The Handmaid's Tale", author: 'Margaret Atwood', price: 'JOD 11.00', img: 'images/book2.jpg'},
-                { title: '1984', author: 'George Orwell', price: 'JOD 10.00', img: 'images/1984.jpg' },
-        { title: "The Handmaid's Tale", author: 'Margaret Atwood', price: 'JOD 11.00', img: 'images/book2.jpg'},        { title: '1984', author: 'George Orwell', price: 'JOD 10.00', img: 'images/1984.jpg' },
-        { title: "The Handmaid's Tale", author: 'Margaret Atwood', price: 'JOD 11.00', img: 'images/book2.jpg'},        { title: '1984', author: 'George Orwell', price: 'JOD 10.00', img: 'images/1984.jpg' },
-        { title: "The Handmaid's Tale", author: 'Margaret Atwood', price: 'JOD 11.00', img: 'images/book2.jpg'},
-        // Add more books as needed
-    ];
-
-    books.forEach(function(book) {
-        var slide = `
-            <div class="slide">
-                <img src="${book.img}" class="w-100 img-fluid" />
-                <h4 id="title">${book.title}</h4>
-                <p id="authors">${book.author}</p>
-                <h5 id="price">${book.price}</h5>
-            </div>
-        `;
-        $('#slick2').slick('slickAdd', slide);
-         $('#little-readers').slick('slickAdd', slide);
-          $('#recommends').slick('slickAdd', slide);
-           $('#booktok').slick('slickAdd', slide);
-    });
-});
-
-    </script>
-</body>
-</html>
