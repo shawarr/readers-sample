@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Readers</title>
+    <link rel="icon" href="images/favicon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css" />
+
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="index-header container-fluid bg-dark">
+        <div class="header-left">
+            <ul class="d-flex align-items-center">
+                <li class="header-icons"><a href="https://facebook.com/readersbookshop/"><img src="images/facebook.png" alt="facebook" class="fa-fw header-icon fb"></a></li>
+                <li class="header-icons"><a href="https://www.instagram.com/readersjordan/"><img src="images/instagram.png" alt="instagram" class="fa-fw header-icon"></a></li>
+            </ul>
+        </div>
+        <div class="header-right">
+            <ul class="d-flex align-items-center">
+                <li class="header-icons"><a href="#"><img src="images/gift.png" alt="gift cards" class="header-icon me-2 mb-2 giftcard">Gift Card</a></li>
+                <li class="header-icons"><a href="#"><img src="images/heart.png" alt="wish list" class="header-icon me-2 header-right">Wish List(0)</a></li>
+                <li class="header-icons"><a href="#"><img src="images/user-sign.png" alt="sign in" class="header-icon me-2 heade-right"></a></li>
+            </ul>
+        </div>
+    </header>
+    
+    <!-- Wrapper -->
+    <div class="wrapper container-fluid d-flex flex-column align-items-center">
+        <div class="readers-fully-booked">
+            <a href="index.html"><img src="images/readers-fully-booked.png" alt="readers logo" class="logo"></a>
+        </div>
+        <div class="searchBar d-flex justify-content-center align-items-center">
+            <input id="searchQueryInput" type="text" placeholder="Search entire store here...">
+            <button id="searchQuerySubmit" type="submit">
+                <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                    <path fill="#666666" d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z" />
+                </svg>
+            </button>
+            <div class="shopping-cart"><a href="#"><img src="images/shopping-bag.png" alt="shopping bag" class="shopping-bag"></a></div>
+        </div>
+    </div>
+    
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+        <a class="navbar-logo" href="#"><img src="images/readersR.png" alt="Readers Logo"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Books</a>
+                    <ul class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
+                          <li><a class="category-head dropdown-item" href="#">Little Readers</a></li>
+                        <li><a class="dropdown-item" href="#">Children's Books 0-3</a></li>
+                        <li><a class="dropdown-item" href="#">Picture Books </a></li>
+                        <li><a class="dropdown-item" href="#">Children's Fiction 6-8</a></li>
+                        <li><a class="dropdown-item" href="#">Children's Fiction 8-10 </a></li>
+                        <li><a class="dropdown-item" href="#">Children's Fiction 10-12</a></li>
+                        <li><a class="dropdown-item" href="#">Children's Fiction 12-14</a></li>    
+                        <li><a class="dropdown-item" href="#">Children's Poetry & Classics</a></li>    
+                        <li><a class="dropdown-item" href="#">Children's Character & Series</a></li>
+                        <li><a class="dropdown-item" href="#">Activity Books</a></li>    
+                        <li><a class="dropdown-item" href="#">Children's Reference</a></li>    
+                        <li><a class="dropdown-item category-head" href="#">Teen & Young Adult</a></li>    
+                        <li><a class="dropdown-item" href="#">Young Adult Fiction</a></li>    
+                        <li><a class="dropdown-item" href="#">Young Adult Reference</a></li>    
+
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="product-page-demo.html">Example 2</a>
+                </li>
+                 <li class="nav-item">
+                    <a class="nav-link" href="#">Example 3</a>
+                </li>
+                 <li class="nav-item">
+                    <a class="nav-link" href="#">Example 4</a>
+                </li>
+                 <li class="nav-item">
+                    <a class="nav-link" href="#">Example 5</a>
+                </li>
+                 <li class="nav-item">
+                    <a class="nav-link" href="#">Example 6</a>
+                </li> 
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Carousel -->
+    <div id="top-carousel" class="slick-slider">
+        <div><img src="images/readersDiscountCarousel1.jpg" alt="Image 1"></div>
+        <div><img src="images/readersDiscountCarousel2.jpg" alt="Image 2"></div>
+        <div><img src="images/readersDiscountCarousel3.jpg" alt="Image 3"></div>
+    </div>
+    <!-- New Titles Carousel-->
+  
+    <div class="container-fluid">
+        <div>
+            <h1 class="category-carousel"><a href="#"><em>New Titles</em></a></h1>
+        </div>
+        <div class="container mt-3 carousel-items">
+            <div id="slick2">
+                <!-- Slides -->
+            </div>
+        </div>
+    </div>
+<!-- TODO (MAKE A CATEGORY CAROUSEL WITH A DISTINCTIVE LOOK HERE LATER)-->
+  <div container-fluid mt-2>
+    <h1 class="category-carousel"><em>Discover Local Authors!<em></em></h1>
+  </div>
+  <div id="local-authors" class="slick-slider">
+        <div><img src="images/localauthors1.jpg" alt="Image 1"></div>
+        <div><img src="images/localauthors2.jpg" alt="Image 2"></div>
+        <div><img src="images/localauthors3.jpg" alt="Image 3"></div>
+    </div>
+
+    <!-- Little Readers Carousel-->
+      <div class="container-fluid"></div>
+        <div>
+            <h1 class="category-carousel"><a href="#"><em>Little Readers</em></a></h1>
+        </div>
+        <div class="container mt-3 carousel-items">
+            <div id="little-readers">
+                <!-- Slides -->
+            </div>
+        </div>
+    </div>
+    <!-- Readers Recommends Carousel-->
+<div class="container-fluid"></div>
+        <div>
+            <h1 class="category-carousel"><a href="#"><em>Readers Recommends</em></a></h1>
+        </div>
+        <div class="container mt-3 carousel-items">
+            <div id="recommends">
+                <!-- Slides -->
+            </div>
+        </div>
+    </div>
+
+    <!--BookTok Carousel-->
+<div class="container-fluid"></div>
+        <div>
+            <h1 class="category-carousel"><a href="#"><em>BookTok</em></a></h1>
+        </div>
+        <div class="container mt-3 carousel-items">
+            <div id="booktok">
+                <!-- Slides -->
+            </div>
+        </div>
+    </div>
+
+    <!-- TODO Instagram Embeds-->
+    <!--Footer-->
+    <footer class="bg-dark">
+  <div class="footer-nav">
+    <ul>
+      <li><a href="#">Home</a></li>
+        |
+      <li><a href="#">About</a></li>
+      |
+      <li><a href="#">Contact</a></li>
+      |
+      <li><a href="#">Site Map</a></li>
+    </ul>
+  </div>
+
+  <div class="footer-sections">
+    <div class="footer-column">
+      <h4>INFORMATION</h4>
+      <ul>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Security and Privacy</a></li>
+        <li><a href="#">Terms & Conditions</a></li>
+        <li><a href="#">Gift Certificates</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h4>CUSTOMER SERVICE</h4>
+      <ul>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#">Returns</a></li>
+        <li><a href="#">Site Map</a></li>
+        <li><a href="#">Order History</a></li>
+        <li><a href="#">Wish List</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h4>EXTRAS</h4>
+      <ul>
+        <li><a href="#">Gift Certificates</a></li>
+        <li><a href="#">Specials</a></li>
+        <li><a href="#">My Account</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h4>STORE INFORMATION</h4>
+      <p>Building 5, Issa An-Nouri St.,<br>7th Circle, Amman, Jordan</p>
+      <p><strong>Call us now:</strong> (+962) 6 582 8488</p>
+      <p>Email: <a href="mailto:support@readers.jo">support@readers.jo</a></p>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>Copyright © 2023 <strong>Readers Bookshop</strong>. All Rights Reserved.</p>
+  </div>
+</footer>
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Slick Carousel -->
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#top-carousel').slick({
+                slidesToShow: 1,  
+                slidesToScroll: 1,
+                dots: true,     
+                autoplay: true, 
+                autoplaySpeed: 5000, 
+                arrows: true,   
+                centerMode: true,
+                centerPadding: '0',
+                fade: true,
+                cssEase: 'linear',
+            });
+               $('#local-authors').slick({
+                slidesToShow: 1,  
+                slidesToScroll: 1,
+                dots: true,     
+                autoplay: true, 
+                autoplaySpeed: 5000, 
+                arrows: true,   
+                centerMode: true,
+                centerPadding: '0',
+                fade: true,
+                cssEase: 'linear',
+            });
+    
+
+            $('#slick2, #little-readers, #recommends, #booktok').slick({
+                slidesToShow: 6,
+                slidesToScroll: 1,
+                dots: true,
+                autoplay: true,
+                autoplaySpeed: 5000,
+                arrows: true,
+                responsive: [
+                    {
+                        breakpoint: 1024, 
+                        settings: {
+                            slidesToShow: 4,
+                            dots: false,
+                            arrows: true,
+                        }
+                    },
+                    {
+                        breakpoint: 768,  
+                        settings: {
+                            slidesToShow: 3,
+                            dots:false,
+                            arrows: true,
+                        }
+                    }
+                ]
+            });
+        });
+         $(document).ready(function() {
+      // Apply Slick settings to all carousels with the 'carousel' class
+      $('.categories-carousel').slick({
+        infinite: true,
+        slidesToShow: 4,  // Default number of slides to show
+        slidesToScroll: 1,
+        arrows: true,    // Display navigation arrows
+        dots: false,     // Dots pagination (set to true if needed)
+        responsive: [
+          {
+            breakpoint: 1024, // For tablet and smaller devices
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 1
+            }
+          },
+          {
+            breakpoint: 600,  // For mobile devices
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
+          }
+        ]
+      });
+    });
+        $(document).ready(function() {
+    var books = [
+        { title: '1984', author: 'George Orwell', price: 'JOD 10.00', img: 'images/1984.jpg' },
+        { title: "The Handmaid's Tale", author: 'Margaret Atwood', price: 'JOD 11.00', img: 'images/book2.jpg'},
+                { title: '1984', author: 'George Orwell', price: 'JOD 10.00', img: 'images/1984.jpg' },
+        { title: "The Handmaid's Tale", author: 'Margaret Atwood', price: 'JOD 11.00', img: 'images/book2.jpg'},        { title: '1984', author: 'George Orwell', price: 'JOD 10.00', img: 'images/1984.jpg' },
+        { title: "The Handmaid's Tale", author: 'Margaret Atwood', price: 'JOD 11.00', img: 'images/book2.jpg'},        { title: '1984', author: 'George Orwell', price: 'JOD 10.00', img: 'images/1984.jpg' },
+        { title: "The Handmaid's Tale", author: 'Margaret Atwood', price: 'JOD 11.00', img: 'images/book2.jpg'},
+        // Add more books as needed
+    ];
+
+    books.forEach(function(book) {
+        var slide = `
+            <div class="slide">
+                <img src="${book.img}" class="w-100 img-fluid" />
+                <h4 id="title">${book.title}</h4>
+                <p id="authors">${book.author}</p>
+                <h5 id="price">${book.price}</h5>
+            </div>
+        `;
+        $('#slick2').slick('slickAdd', slide);
+         $('#little-readers').slick('slickAdd', slide);
+          $('#recommends').slick('slickAdd', slide);
+           $('#booktok').slick('slickAdd', slide);
+    });
+});
+
+    </script>
+</body>
+</html>
