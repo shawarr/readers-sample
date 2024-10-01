@@ -96,40 +96,131 @@
 
     <!-- Carousel -->
     <div id="top-carousel" class="slick-slider">
-        <div><img src="images/carousel1.jpg" alt="Image 1"></div>
-        <div><img src="images/carousel2.jpg" alt="Image 2"></div>
-        <div><img src="images/carousel3.jpg" alt="Image 3"></div>
+        <div><img src="images/readersDiscountCarousel1.jpg" alt="Image 1"></div>
+        <div><img src="images/readersDiscountCarousel2.jpg" alt="Image 2"></div>
+        <div><img src="images/readersDiscountCarousel3.jpg" alt="Image 3"></div>
     </div>
-    
-    <!-- Desktop Carousel -->
-    <div class="container-fluid d-none d-lg-block" id="desktopCarousel">
-        <div class="titles">
-            <h1><a href="#" id="desktopCarousel">New Titles</a></h1>
-            <div id="slick">
-                <!-- Slides -->
-            </div>
+    <!-- New Titles Carousel-->
+  
+    <div class="container-fluid">
+        <div>
+            <h1 class="category-carousel"><a href="#"><em>New Titles</em></a></h1>
         </div>
-    </div>
-
-    <!-- Mobile Carousel -->
-    <div class="container d-lg-none" id="mobileCarousel">
-        <div class="titles titles2">
-            <h1><a href="#">New Titles</a></h1>
-        </div>
-        <div class="container mt-3">
+        <div class="container mt-3 carousel-items">
             <div id="slick2">
                 <!-- Slides -->
             </div>
         </div>
     </div>
+<!-- TODO (MAKE A CATEGORY CAROUSEL WITH A DISTINCTIVE LOOK HERE LATER)-->
+  <div container-fluid mt-2>
+    <h1 class="category-carousel"><em>Discover Local Authors!<em></em></h1>
+  </div>
+  <div id="local-authors" class="slick-slider">
+        <div><img src="images/localauthors1.jpg" alt="Image 1"></div>
+        <div><img src="images/localauthors2.jpg" alt="Image 2"></div>
+        <div><img src="images/localauthors3.jpg" alt="Image 3"></div>
+    </div>
 
+    <!-- Little Readers Carousel-->
+      <div class="container-fluid"></div>
+        <div>
+            <h1 class="category-carousel"><a href="#"><em>Little Readers</em></a></h1>
+        </div>
+        <div class="container mt-3 carousel-items">
+            <div id="little-readers">
+                <!-- Slides -->
+            </div>
+        </div>
+    </div>
+    <!-- Readers Recommends Carousel-->
+<div class="container-fluid"></div>
+        <div>
+            <h1 class="category-carousel"><a href="#"><em>Readers Recommends</em></a></h1>
+        </div>
+        <div class="container mt-3 carousel-items">
+            <div id="recommends">
+                <!-- Slides -->
+            </div>
+        </div>
+    </div>
+
+    <!--BookTok Carousel-->
+<div class="container-fluid"></div>
+        <div>
+            <h1 class="category-carousel"><a href="#"><em>BookTok</em></a></h1>
+        </div>
+        <div class="container mt-3 carousel-items">
+            <div id="booktok">
+                <!-- Slides -->
+            </div>
+        </div>
+    </div>
+
+    <!-- TODO Instagram Embeds-->
+    <!--Footer-->
+    <footer class="bg-dark">
+  <div class="footer-nav">
+    <ul>
+      <li><a href="#">Home</a></li>
+        |
+      <li><a href="#">About</a></li>
+      |
+      <li><a href="#">Contact</a></li>
+      |
+      <li><a href="#">Site Map</a></li>
+    </ul>
+  </div>
+
+  <div class="footer-sections">
+    <div class="footer-column">
+      <h4>INFORMATION</h4>
+      <ul>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Security and Privacy</a></li>
+        <li><a href="#">Terms & Conditions</a></li>
+        <li><a href="#">Gift Certificates</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h4>CUSTOMER SERVICE</h4>
+      <ul>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#">Returns</a></li>
+        <li><a href="#">Site Map</a></li>
+        <li><a href="#">Order History</a></li>
+        <li><a href="#">Wish List</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h4>EXTRAS</h4>
+      <ul>
+        <li><a href="#">Gift Certificates</a></li>
+        <li><a href="#">Specials</a></li>
+        <li><a href="#">My Account</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h4>STORE INFORMATION</h4>
+      <p>Building 5, Issa An-Nouri St.,<br>7th Circle, Amman, Jordan</p>
+      <p><strong>Call us now:</strong> (+962) 6 582 8488</p>
+      <p>Email: <a href="mailto:support@readers.jo">support@readers.jo</a></p>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>Copyright © 2023 <strong>Readers Bookshop</strong>. All Rights Reserved.</p>
+  </div>
+</footer>
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <!-- Bootstrap JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Slick Carousel -->
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-
     <script>
         $(document).ready(function(){
             $('#top-carousel').slick({
@@ -144,8 +235,21 @@
                 fade: true,
                 cssEase: 'linear',
             });
+               $('#local-authors').slick({
+                slidesToShow: 1,  
+                slidesToScroll: 1,
+                dots: true,     
+                autoplay: true, 
+                autoplaySpeed: 5000, 
+                arrows: true,   
+                centerMode: true,
+                centerPadding: '0',
+                fade: true,
+                cssEase: 'linear',
+            });
+    
 
-            $('#slick, #slick2').slick({
+            $('#slick2, #little-readers, #recommends, #booktok').slick({
                 slidesToShow: 6,
                 slidesToScroll: 1,
                 dots: true,
@@ -164,7 +268,7 @@
                     {
                         breakpoint: 768,  
                         settings: {
-                            slidesToShow: 2,
+                            slidesToShow: 3,
                             dots:false,
                             arrows: true,
                         }
@@ -172,6 +276,32 @@
                 ]
             });
         });
+         $(document).ready(function() {
+      // Apply Slick settings to all carousels with the 'carousel' class
+      $('.categories-carousel').slick({
+        infinite: true,
+        slidesToShow: 4,  // Default number of slides to show
+        slidesToScroll: 1,
+        arrows: true,    // Display navigation arrows
+        dots: false,     // Dots pagination (set to true if needed)
+        responsive: [
+          {
+            breakpoint: 1024, // For tablet and smaller devices
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 1
+            }
+          },
+          {
+            breakpoint: 600,  // For mobile devices
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
+          }
+        ]
+      });
+    });
         $(document).ready(function() {
     var books = [
         { title: '1984', author: 'George Orwell', price: 'JOD 10.00', img: 'images/1984.jpg' },
@@ -192,8 +322,10 @@
                 <h5 id="price">${book.price}</h5>
             </div>
         `;
-        $('#slick').slick('slickAdd', slide);
         $('#slick2').slick('slickAdd', slide);
+         $('#little-readers').slick('slickAdd', slide);
+          $('#recommends').slick('slickAdd', slide);
+           $('#booktok').slick('slickAdd', slide);
     });
 });
 
