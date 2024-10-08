@@ -39,7 +39,7 @@
             <a href="index.html"><img src="images/readers-fully-booked.png" alt="readers logo" class="logo"></a>
         </div>
         <div class="searchBar d-flex justify-content-center align-items-center">
-            <input id="searchQueryInput" type="text" placeholder="Search entire store here...">
+            <input id="searchQueryInput" type="text" placeholder="Search Readers ...">
             <button id="searchQuerySubmit" type="submit">
                 <svg style="width:24px;height:24px" viewBox="0 0 24 24">
                     <path fill="#666666" d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z" />
@@ -49,8 +49,7 @@
         </div>
     </div>
     
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+   <nav class="navbar navbar-expand-lg navbar-light bg-dark">
         <a class="navbar-logo" href="#"><img src="images/readersR.png" alt="Readers Logo"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -78,20 +77,15 @@
                     </ul>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Example 2</a>
+                    <a class="nav-link" href="product-page-demo.html">Gadgets & Accessories</a>
                 </li>
                  <li class="nav-item">
-                    <a class="nav-link" href="#">Example 3</a>
+                    <a class="nav-link" href="#">Stationery</a>
                 </li>
                  <li class="nav-item">
-                    <a class="nav-link" href="#">Example 4</a>
+                    <a class="nav-link" href="#">Toys</a>
                 </li>
-                 <li class="nav-item">
-                    <a class="nav-link" href="#">Example 5</a>
-                </li>
-                 <li class="nav-item">
-                    <a class="nav-link" href="#">Example 6</a>
-                </li> 
+               
             </ul>
         </div>
     </nav>
@@ -134,13 +128,14 @@
             <h6 class="mb-0">Total Pages</h6>
         </div>
     </div>
-<div class="container">
+<div class="container bg-dark book-description">
     <div class="row justify-content-between align-items-start">
         <!-- Flex container for the title and cart -->
         <div class="col-12 d-flex flex-row justify-content-between align-items-start description-cart-container">
             <!-- Description Title Section -->
             <div class="description-title">
                 <h1>Description</h1>
+                <hr style="color:red; border-width: 2px; border-radius:2em">
             </div>
 
             <!-- Add to Cart Section -->
@@ -167,6 +162,67 @@
 
     
 </div>
+<hr style="border-width:0.5px; border-color:black; border-style:solid; margin-top:2em" class="mx-5">
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12 d-flex flow-row justify-content-between align-items">
+            <div class="more-info">
+                <h1>More Information</h1>
+                      <div class="col-12">
+                        <h6><strong>Categories: </strong> <a href="#" class="categories">Books, </a> <a href="#" class="categories">Adults and General Classification</a> </h6>
+                        <h6><strong>Available Book Formats: </strong> Paperback</h6>
+                        <h6><strong>ISBN: </strong>9780141036144</h6>
+                      
+                      </div>
+                      </div>
+                      </div>
+                      </div>
+                      </div>
+                      
+                      <hr style="border-width:0.5px; border-color:black; border-style:solid; margin-top:2em" class="mx-5">
+      
+      <div class="container-fluid">
+        <div>
+            <h1 class="related-products mt-4"><a href="#"><em>More like this</em></a></h1>
+        </div>
+        <div class="container mt-3 carousel-items">
+            <div id="related-products">
+                 <div class="slide">
+                <img src="images/book2.jpg" class="w-80 img-fluid" />
+                <h4 id="title">The Handmaid's Tale</h4>
+                <p id="authors">Margaret Atwood</p>
+                <h5 id="price">11.00 JOD</h5>
+            </div>
+             <div class="slide">
+                <img src="images/we.jpg" class="w-80 img-fluid" />
+                <h4 id="title">WE</h4>
+                <p id="authors">Yevgeny Zamyatin</p>
+                <h5 id="price">7.00 JOD</h5>
+            </div>
+             <div class="slide">
+                <img src="images/451.jpg" class="w-80 img-fluid" />
+                <h4 id="title">Fahrenheit 451</h4>
+                <p id="authors">Ray Bradbury</p>
+                <h5 id="price">12.50 JOD</h5>
+            </div>
+             <div class="slide">
+                <img src="images/bnw.jpg" class="w-80 img-fluid" />
+                <h4 id="title">Brave New World</h4>
+                <p id="authors">Aldous Huxley</p>
+                <h5 id="price">11.00 JOD</h5>
+            </div>
+             <div class="slide">
+                <img src="images/time machine.jpg" class="w-80 img-fluid" />
+                <h4 id="title">The Time Machine</h4>
+                <p id="authors">H. G. Wells</p>
+                <h5 id="price">3.5 JOD</h5>
+            </div>
+            </div>
+      </div>
+    </div>
+    
+
   <!--Footer-->
     <footer class="bg-dark">
   <div class="footer-nav">
@@ -245,6 +301,36 @@
         document.getElementById("quantity").textContent = quantity;
         document.getElementById("priceButton").textContent = `${quantity * pricePerItem} JOD`;
     }
+    
+    $(document).ready(function(){
+            $('#related-products').slick({
+                slidesToShow: 6,
+                slidesToScroll: 1,
+                dots: false,
+                autoplay: true,
+                autoplaySpeed: 5000,
+                arrows: true,
+                responsive: [
+                    {
+                        breakpoint: 1024, 
+                        settings: {
+                            slidesToShow: 4,
+                            dots: false,
+                            arrows: true,
+                        }
+                    },
+                    {
+                        breakpoint: 768,  
+                        settings: {
+                            slidesToShow: 3,
+                            dots:false,
+                            arrows: true,
+                        }
+                    }
+                ]
+            });
+        });
+    
 </script>
 
     </body>
