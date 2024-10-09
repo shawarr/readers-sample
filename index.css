@@ -256,25 +256,25 @@ img.fb{
 
 
 
-#slick2 {
+#slick2, #related-products, #little-readers , #recommends, #booktok {
     padding:2em;
 }
 
-#slick2.slick-initialized {
+.slick-initialized {
     display: block;
 }
 
-#slick2 .slick-list {
+.slick-list {
     margin-left: -15px;
     margin-right: -15px;
 }
 
-#slick2 .slick-slide {
+ .slick-slide {
     padding-right: 15px;
     padding-left: 15px;
 }
 
-#slick2 .slick-slide:focus {
+ .slick-slide:focus {
     outline: none;
     cursor: grab;
 }
@@ -308,6 +308,11 @@ img.fb{
     width: 100%; /* Make images responsive */
     height: auto; /* Maintain aspect ratio */
 }
+.slick-slide img {
+    display: block;
+    margin: 0 auto;
+}
+
 
 
 
@@ -376,90 +381,6 @@ img.fb{
 
 
 
-
-
-
-
-#little-readers {
-    padding:2em;
-}
-
-#little-readers.slick-initialized {
-    display: block;
-}
-
-#little-readers .slick-list {
-    margin-left: -15px;
-    margin-right: -15px;
-}
-
-#little-readers .slick-slide {
-    padding-right: 15px;
-    padding-left: 15px;
-}
-
-#little-readers .slick-slide:focus {
-    outline: none;
-    cursor: grab;
-}
-
-
-
-
-
-
-#recommends {
-    padding:2em;
-}
-
-#recommends.slick-initialized {
-    display: block;
-}
-
-#recommends .slick-list {
-    margin-left: -15px;
-    margin-right: -15px;
-}
-
-#recommends .slick-slide {
-    padding-right: 15px;
-    padding-left: 15px;
-}
-
-#recommends .slick-slide:focus {
-    outline: none;
-    cursor: grab;
-}
-
-
-
-
-
-#booktok {
-    padding:2em;
-}
-
-#booktok.slick-initialized {
-    display: block;
-}
-
-#booktok .slick-list {
-    margin-left: -15px;
-    margin-right: -15px;
-}
-
-#booktok .slick-slide {
-    padding-right: 15px;
-    padding-left: 15px;
-}
-
-#booktok .slick-slide:focus {
-    outline: none;
-    cursor: grab;
-}
-
-
-
 .slick-next  {
     background: none;
     font-size: 20px;
@@ -479,8 +400,6 @@ img.fb{
     font-size:20px;
     color:red;
 }
-
-
 
 /* General Footer Styling */
 footer {
