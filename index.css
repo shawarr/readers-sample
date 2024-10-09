@@ -4,6 +4,7 @@
     margin: 0;
     padding: 0;
     overflow-x:visible;
+    font-style:normal;
 
 }
 
@@ -237,12 +238,23 @@ img.fb{
 
 #author {
     font-size: larger;
+    font-style:normal !important;
 }
 
-#price {
+.carousel-item #price,
+.slick-slide #price {
     color: red;
     font-size: medium;
+    font-weight: bold;
 }
+
+.slick-cloned #price {
+    color: red;
+    font-size: medium;
+    
+}
+
+
 
 #slick2 {
     padding:2em;
@@ -268,29 +280,11 @@ img.fb{
 }
 
 
-#slick2 .slick-prev  {
-    background: none;
-    color: #fff; /* Change the color if necessary */
-    font-size: 20px;
-}
 
-#slick2 .slick-prev::before {
-    content: '◀';
-    font-size: 20px;
-}
-#slick2 .slick-next  {
-    background: none;
-    font-size: 20px;
-}
 
-#slick2 .slick-next::before {
-    content: '▶';
-    font-size: 20px;
-}
 
-#slick2 .slick-next {
-    right: -30px;
-    background-image: url('https://i.imgur.com/AhkEkP6.png');
+.slide h4, .slick p, .slide h5, .slick #price{
+    font-style:normal !important;
 }
 
 .slide p, h5, h4 {
@@ -315,17 +309,15 @@ img.fb{
     height: auto; /* Maintain aspect ratio */
 }
 
-.slick-prev:before{
-    color:white !important;
-}
-.slick-next:before{
-    color:red !important
-}
+
+
 
 
 .slick-prev, .slick-next {
     background: none !important; /* Remove any background applied */
     border: none; /* If there's any border causing the issue */
+    padding:1em;
+   
 }
 
 
@@ -382,30 +374,11 @@ img.fb{
 }
 
 
-.categories-carousel .slick-prev  {
-    background: none;
-    color: #fff; /* Change the color if necessary */
-    font-size: 20px;
-}
 
-.categories-carousel .slick-prev::before {
-    content: '◀';
-    font-size: 20px;
-}
-.categories-carousel .slick-next  {
-    background: none;
-    font-size: 20px;
-}
 
-.categories-carousel .slick-next::before {
-    content: '▶';
-    font-size: 20px;
-}
 
-.categories-carousel .slick-next {
-    right: -30px;
-    background-image: url('https://i.imgur.com/AhkEkP6.png');
-}
+
+
 
 #little-readers {
     padding:2em;
@@ -431,30 +404,9 @@ img.fb{
 }
 
 
-#little-readers .slick-prev  {
-    background: none;
-    color: #fff; /* Change the color if necessary */
-    font-size: 20px;
-}
 
-#little-readers .slick-prev::before {
-    content: '◀';
-    font-size: 20px;
-}
-#little-readers .slick-next  {
-    background: none;
-    font-size: 20px;
-}
 
-#little-readers .slick-next::before {
-    content: '▶';
-    font-size: 20px;
-}
 
-#little-readers .slick-next {
-    right: -30px;
-    background-image: url('https://i.imgur.com/AhkEkP6.png');
-}
 
 #recommends {
     padding:2em;
@@ -480,30 +432,8 @@ img.fb{
 }
 
 
-#recommends .slick-prev  {
-    background: none;
-    color: #fff; /* Change the color if necessary */
-    font-size: 20px;
-}
 
-#recommends .slick-prev::before {
-    content: '◀';
-    font-size: 20px;
-}
-#recommends .slick-next  {
-    background: none;
-    font-size: 20px;
-}
 
-#recommends .slick-next::before {
-    content: '▶';
-    font-size: 20px;
-}
-
-#recommends .slick-next {
-    right: -30px;
-    background-image: url('https://i.imgur.com/AhkEkP6.png');
-}
 
 #booktok {
     padding:2em;
@@ -529,34 +459,32 @@ img.fb{
 }
 
 
-#booktok .slick-prev  {
-    background: none;
-    color:white; /* Change the color if necessary */
-    font-size: 20px;
-}
 
-#booktok .slick-prev::before {
-    content: '◀';
-    font-size: 20px;
-}
-#booktok .slick-next  {
+.slick-next  {
     background: none;
     font-size: 20px;
 }
 
-#booktok .slick-next::before {
+.slick-next::before {
     content: '▶';
     font-size: 20px;
+    color:red;
+}
+.slick-prev {
+    background:none;
+    font-size:20px;
+}
+.slick-prev::before{
+    content:'◀';
+    font-size:20px;
+    color:red;
 }
 
-#booktok .slick-next {
-    right: -30px;
-    background-image: url('https://i.imgur.com/AhkEkP6.png');
-}
+
 
 /* General Footer Styling */
 footer {
-    margin-top:2em;
+    margin-top:4em;
   background-color: #1e1e1e; /* Dark background similar to your image */
   color: #fff;
   padding: 40px 20px;
@@ -581,6 +509,11 @@ footer {
 
 .footer-nav ul li a {
   color: #fff;
+  text-decoration: none;
+  display:inline-block;
+}
+.footer-nav ul li a:hover {
+  color: red;
   text-decoration: none;
   display:inline-block;
 }
@@ -619,7 +552,7 @@ footer {
 }
 
 .footer-column ul li a:hover {
-  color: #fff;
+  color: red;
 }
 
 .footer-column p {
@@ -645,6 +578,10 @@ footer {
 
 .footer-bottom p strong {
   color: #fff;
+}
+
+.footer-column a{
+    text-decoration: none;
 }
 
 /* Responsiveness */
@@ -820,7 +757,16 @@ footer {
     align-items: center;
     box-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
     transition: all 0.3s ease;
+    
  
+}
+#authors a:hover {
+    color:red;
+    text-decoration:none;
+}
+#authors a{
+    color:black;
+    text-decoration:none;
 }
 
 #add-to-cart:hover {
@@ -836,6 +782,7 @@ footer {
 
 #priceButton{
     font-weight: bold;
+    width:5em;
 
 }
 
@@ -848,23 +795,31 @@ footer {
     width: 100%;
 }
 
-/* Shrink the cart icon on smaller screens */
-@media (max-width: 576px) {
-    .cart-icon {
-        font-size: 14px;
-        margin-right: 4px;
+
+@media (max-width: 768px) {
+    /* Center description title */
+    .description-title {
+        text-align: center;
+        width: 100%;
     }
-}
-@media (max-width: 576px) {
-    #add-to-cart {
-        padding: 5px 10px;
-        font-size: 14px;
-        height: 50px;
+
+    /* Move add to cart section below description */
+    .cart-container {
+        margin-top: 20px;
+        text-align: center;
+        width: 100%;
+        justify-content: center;
+    }
+
+    /* Ensure buttons are aligned properly */
+    .cart-container button {
+        margin: 5px;
     }
 }
 
 .description-title{
     color:white;
+    
 }
 
 .book-description{
@@ -927,38 +882,14 @@ footer {
 }
 
 
-#related-products .slick-prev  {
-    background: none;
-    color:white; /* Change the color if necessary */
-    font-size: 20px;
-}
 
-#related-products .slick-prev::before {
-    content: '◀';
-    font-size: 20px;
-}
-#related-products .slick-next  {
-    background: none;
-    font-size: 20px;
-}
 
-#related-products .slick-next::before {
-    content: '▶';
-    font-size: 20px;
-}
 
-#related-products .slick-next {
-    right: -30px;
-    background-image: url('https://i.imgur.com/AhkEkP6.png');
-}
+
 
 .slide img{
     border-color:black;
     border-style:solid;
-    box-shadow: 0 0 20px rgba(255, 0, 0, 0.8);
+    box-shadow: 0 0 1em rgba(255, 0, 0, 0.8);
 }
-
-
-
-
 

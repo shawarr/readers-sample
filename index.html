@@ -15,7 +15,7 @@
 </head>
 <body>
     <!-- Header -->
-    <header class="index-header container-fluid bg-dark">
+       <header class="index-header container-fluid bg-dark">
         <div class="header-left">
             <ul class="d-flex align-items-center">
                 <li class="header-icons"><a href="https://facebook.com/readersbookshop/"><img src="images/facebook.png" alt="facebook" class="fa-fw header-icon fb"></a></li>
@@ -97,7 +97,7 @@
     </div>
     <!-- New Titles Carousel-->
   
-    <div class="container-fluid">
+    <div class="container-fluid mt-4">
         <div>
             <h1 class="category-carousel"><a href="#"><em>New Titles</em></a></h1>
         </div>
@@ -221,10 +221,10 @@
             $('#top-carousel').slick({
                 slidesToShow: 1,  
                 slidesToScroll: 1,
-                dots: true,     
+                dots: false,     
                 autoplay: true, 
                 autoplaySpeed: 5000, 
-                arrows: true,   
+                arrows: false,   
                 centerMode: true,
                 centerPadding: '0',
                 fade: true,
@@ -236,7 +236,7 @@
                 dots: true,     
                 autoplay: true, 
                 autoplaySpeed: 5000, 
-                arrows: true,   
+                arrows: false,   
                 centerMode: true,
                 centerPadding: '0',
                 fade: true,
@@ -265,64 +265,88 @@
                         settings: {
                             slidesToShow: 3,
                             dots:false,
-                            arrows: true,
+                            arrows: false,
                         }
                     }
                 ]
             });
         });
-         $(document).ready(function() {
-      // Apply Slick settings to all carousels with the 'carousel' class
-      $('.categories-carousel').slick({
-        infinite: true,
-        slidesToShow: 4,  // Default number of slides to show
-        slidesToScroll: 1,
-        arrows: true,    // Display navigation arrows
-        dots: false,     // Dots pagination (set to true if needed)
-        responsive: [
-          {
-            breakpoint: 1024, // For tablet and smaller devices
-            settings: {
-              slidesToShow: 2,
-              slidesToScroll: 1
-            }
-          },
-          {
-            breakpoint: 600,  // For mobile devices
-            settings: {
-              slidesToShow: 1,
-              slidesToScroll: 1
-            }
-          }
-        ]
-      });
-    });
+      
         $(document).ready(function() {
     var books = [
         { title: '1984', author: 'George Orwell', price: 'JOD 10.00', img: 'images/1984.jpg' },
+        { title: "Brave New World", author: 'Aldous Huxley', price: 'JOD 11.00', img: 'images/bnw.jpg'},
+                { title: '1984', author: 'Yevgeny Zamyatin', price: 'JOD 9.00', img: 'images/we.jpg' },
+        { title: "The Time Machine", author: 'H. G. Wells', price: 'JOD 3.50', img: 'images/time machine.jpg'},       
+        { title: "The Songbird & The Heart of Stone", author: 'Carissa Broadbent', price: 'JOD 14.50', img: 'images/newtitles6.jpg'},       
         { title: "The Handmaid's Tale", author: 'Margaret Atwood', price: 'JOD 11.00', img: 'images/book2.jpg'},
-                { title: '1984', author: 'George Orwell', price: 'JOD 10.00', img: 'images/1984.jpg' },
-        { title: "The Handmaid's Tale", author: 'Margaret Atwood', price: 'JOD 11.00', img: 'images/book2.jpg'},        { title: '1984', author: 'George Orwell', price: 'JOD 10.00', img: 'images/1984.jpg' },
-        { title: "The Handmaid's Tale", author: 'Margaret Atwood', price: 'JOD 11.00', img: 'images/book2.jpg'},        { title: '1984', author: 'George Orwell', price: 'JOD 10.00', img: 'images/1984.jpg' },
-        { title: "The Handmaid's Tale", author: 'Margaret Atwood', price: 'JOD 11.00', img: 'images/book2.jpg'},
+           {title:'Gold', author:'Raven Kennedy', price:'9', img:'images/newtitles7.jpg'}
+      
         // Add more books as needed
     ];
 
     books.forEach(function(book) {
         var slide = `
-            <div class="slide">
-                <img src="${book.img}" class="w-100 img-fluid" />
-                <h4 id="title">${book.title}</h4>
-                <p id="authors">${book.author}</p>
-                <h5 id="price">${book.price}</h5>
-            </div>
+         <div class ="slide">
+        <img src="${book.img}" class="w-100 img-fluid" />
+        <h4 id="title" style="margin-top:1em">${book.title}</h4>
+        <p id="authors">${book.author}</p>
+        <h5 id="price" style="color:red; font-size:medium; font-weight:bold;">JOD ${book.price}<h5>
+        </div>
         `;
-        $('#slick2').slick('slickAdd', slide);
-         $('#little-readers').slick('slickAdd', slide);
+    
           $('#recommends').slick('slickAdd', slide);
-           $('#booktok').slick('slickAdd', slide);
+         
     });
 });
+$(document).ready(function(){
+    var books = [
+        {title : 'Onyx Storm' , author: 'Rebecca Yaros' , price : '11.00' , img : 'images/newtitles1.jpg'},
+        {title : ' The Dark Obsession', author: 'K. T. Archer', price: '12.5', img: 'images/newtitles2.jpg'},
+        {title : 'Scythe & Sparrow' , author: 'Brynne Weaver', price: '13', img: 'images/newtitles3.jpg'},
+          { title: "Say You'll Remember Me", author: 'Abby Jimenez', price: '10.00', img: 'images/newtitles4.jpg' },
+        { title: 'Deep End', author: 'Ali Hazelwood', price: '12.00', img: 'images/newtitles5.jpg' },
+        {title: 'The Songbird & The Heart of Stone', author:'Carissa Broadbent',  price:'14.5', img:'images/newtitles6.jpg'},
+        {title:'Gold', author:'Raven Kennedy', price:'9', img:'images/newtitles7.jpg'}
+    ];
+    books.forEach(function(book){
+        var slide = `
+        <div class ="slide">
+        <img src="${book.img}" class="w-100 img-fluid" />
+        <h4 id="title" style="margin-top:1em">${book.title}</h4>
+        <p id="authors">${book.author}</p>
+        <h5 id="price" style="color:red; font-size:medium; font-weight:bold;">JOD ${book.price}<h5>
+        </div>
+        `;
+        $('#slick2').slick('slickAdd',slide);
+        $('#booktok').slick('slickAdd', slide);
+    });
+});
+
+
+$(document).ready(function(){
+var books =[
+    {title:"Aesop's Fables", author:'Aesop', price:'7.5', img:'images/little-readers1.jpg'},
+    {title:'Beauty and The Beast', author:'Gabrielle-Suzanne de Villeneuve', price:'9.5', img:'images/little-readers2.jpg'},
+    {title: 'Alice In Wonderland', author:'Lewis Carroll', price:'9.5', img:'images/little-readers3.jpg'},
+    {title:"Grimm's Complete Fairy Tales", author:'The Brothers Grimm', price:'10', img:'images/little-readers4.jpg'},
+    {title:'The Arabian Nights', author:'Sir Richard F. Burton', price:'10', img:'images/little-readers5.jpg'},
+    {title:'Avatar The Last Airbender', author:'Gnee Luen Yang', price:'10', img:'images/little-readers6.jpg'},
+    {title:'Anne of Green Gables', author:'L. M. Montgomery', price:'9.5', img:'images/little-readers7.jpg'}
+];
+books.forEach(function(book){
+    var slide = `
+      <div class ="slide">
+        <img src="${book.img}" class="w-100 img-fluid" />
+        <h4 id="title" style="margin-top:1em">${book.title}</h4>
+        <p id="authors">${book.author}</p>
+        <h5 id="price" style="color:red; font-size:medium; font-weight:bold;">JOD ${book.price}<h5>
+        </div>
+        `;
+        $('#little-readers').slick('slickAdd',slide);
+});
+});
+
 
  
     </script>

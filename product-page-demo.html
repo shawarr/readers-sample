@@ -131,15 +131,22 @@
 <div class="container bg-dark book-description">
     <div class="row justify-content-between align-items-start">
         <!-- Flex container for the title and cart -->
-        <div class="col-12 d-flex flex-row justify-content-between align-items-start description-cart-container">
+        <div class="col-12 d-flex flex-column align-items-center description-cart-container">
             <!-- Description Title Section -->
             <div class="description-title">
                 <h1>Description</h1>
-                <hr style="color:red; border-width: 2px; border-radius:2em">
+                <hr style="color:red; border-width: 2px; border-radius:2em;">
+            </div>
+
+            <!-- Description Text Section -->
+            <div class="col-12">
+                <p class="description-text">
+Winston Smith works for the Ministry of Truth in London, chief city of Airstrip One. Big Brother stares out from every poster, the Thought Police uncover every act of betrayal. When Winston finds love with Julia, he discovers that life does not have to be dull and deadening, and awakens to new possibilities. Despite the police helicopters that hover and circle overhead, Winston and Julia begin to question the Party; they are drawn towards conspiracy. Yet Big Brother will not tolerate dissent - even in the mind. For those with original thoughts they invented Room 101. . .
+                </p>
             </div>
 
             <!-- Add to Cart Section -->
-            <div class="cart-container">
+            <div class="cart-container" style="margin:2em;">
                 <button id="decrease" class="qty-btn">-</button>
                 <span id="quantity">1</span>
                 <button id="increase" class="qty-btn">+</button>
@@ -149,16 +156,8 @@
                 </button>
             </div>
         </div>
-        
-        <!-- Description Text Section -->
-        <div class="col-12">
-            <p class="description-text">
-              Winston Smith works for the Ministry of Truth in London, chief city of Airstrip One. Big Brother stares out from every poster, the Thought Police uncover every act of betrayal. When Winston finds love with Julia, he discovers that life does not have to be dull and deadening, and awakens to new possibilities. Despite the police helicopters that hover and circle overhead, Winston and Julia begin to question the Party; they are drawn towards conspiracy. Yet Big Brother will not tolerate dissent - even in the mind. For those with original thoughts they invented Room 101. . .
-            </p>
-        </div>
     </div>
 </div>
-
 
     
 </div>
@@ -190,33 +189,33 @@
             <div id="related-products">
                  <div class="slide">
                 <img src="images/book2.jpg" class="w-80 img-fluid" />
-                <h4 id="title">The Handmaid's Tale</h4>
+                <h4 id="title" style="margin-top:1em">The Handmaid's Tale</h4>
                 <p id="authors">Margaret Atwood</p>
-                <h5 id="price">11.00 JOD</h5>
+                <h5 id="price" style="color:red; font-size:medium; font-weight:bold;">11.00 JOD<h5>
             </div>
              <div class="slide">
                 <img src="images/we.jpg" class="w-80 img-fluid" />
-                <h4 id="title">WE</h4>
+                <h4 id="title" style="margin-top:1em">WE</h4>
                 <p id="authors">Yevgeny Zamyatin</p>
-                <h5 id="price">7.00 JOD</h5>
+                <h5 id="price" style="color:red; font-size:medium; font-weight:bold;">7.00 JOD</h5>
             </div>
              <div class="slide">
                 <img src="images/451.jpg" class="w-80 img-fluid" />
-                <h4 id="title">Fahrenheit 451</h4>
+                <h4 id="title" style="margin-top:1em">Fahrenheit 451</h4>
                 <p id="authors">Ray Bradbury</p>
-                <h5 id="price">12.50 JOD</h5>
+                <h5 id="price" style="color:red; font-size:medium; font-weight:bold;">12.50 JOD</h5>
             </div>
              <div class="slide">
                 <img src="images/bnw.jpg" class="w-80 img-fluid" />
-                <h4 id="title">Brave New World</h4>
+                <h4 id="title" style="margin-top:1em">Brave New World</h4>
                 <p id="authors">Aldous Huxley</p>
-                <h5 id="price">11.00 JOD</h5>
+                <h5 id="price" style="color:red; font-size:medium; font-weight:bold;">11.00 JOD</h5>
             </div>
              <div class="slide">
                 <img src="images/time machine.jpg" class="w-80 img-fluid" />
-                <h4 id="title">The Time Machine</h4>
+                <h4 id="title" style="margin-top:1em">The Time Machine</h4>
                 <p id="authors">H. G. Wells</p>
-                <h5 id="price">3.5 JOD</h5>
+                <h5 id="price" style="color:red; font-size:medium; font-weight:bold;">3.5 JOD</h5>
             </div>
             </div>
       </div>
@@ -299,7 +298,7 @@
 
     function updatePrice() {
         document.getElementById("quantity").textContent = quantity;
-        document.getElementById("priceButton").textContent = `${quantity * pricePerItem} JOD`;
+        document.getElementById("priceButton").textContent = `${(quantity * pricePerItem).toFixed(2)} JOD`;
     }
     
     $(document).ready(function(){
@@ -316,7 +315,7 @@
                         settings: {
                             slidesToShow: 4,
                             dots: false,
-                            arrows: true,
+                            arrows: false,
                         }
                     },
                     {
@@ -324,7 +323,7 @@
                         settings: {
                             slidesToShow: 3,
                             dots:false,
-                            arrows: true,
+                            arrows: false,
                         }
                     }
                 ]
