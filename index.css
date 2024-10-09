@@ -609,10 +609,17 @@ footer {
    padding-top:2.5em;
 }
 
-#product-image img{
-   border-style:solid;
-   border-width:0.5em;
-   margin-bottom:2em;
+#product-image img {
+    border-style: solid;
+    border-width: 0.5em;
+    margin: 0 auto 2em; /* Center horizontally and add bottom margin */
+    display: block; /* Ensures the image takes up its own line */
+    width: 95%;
+}
+@media (max-width: 767.98px) { 
+    #product-image img{
+        width:75%;
+    }
 }
 #product-authors h5{
     color:Black;
