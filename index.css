@@ -816,6 +816,7 @@ footer {
 .slide img{
     border-color:black;
     border-style:solid;
-    box-shadow: 0 0 1em rgba(255, 0, 0, 0.8);
+    box-shadow: 0 0 0.75em rgba(255, 0, 0, 0.8);
+    margin-top:1em;
 }
 
