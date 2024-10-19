@@ -3,7 +3,6 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    overflow-x:visible;
     font-style:normal;
 
 }
@@ -12,6 +11,7 @@
 body {
     font-family: 'Times New Roman', Times, serif;
     background-color: white;
+    overflow-x:hidden;
 }
 
 /* Header styling */
