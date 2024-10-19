@@ -3,6 +3,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+   
     font-style:normal;
 
 }
@@ -175,6 +176,7 @@ img.fb{
     padding: 0; /* Remove padding if it causes overflow */
     margin-right:6%; /* Remove margin if it causes overflow */
     padding-right:6%;
+    margin-bottom:1.5em;
     
 }
 .navbar{
@@ -185,7 +187,7 @@ img.fb{
 }
 }
 .dropdown-menu{
-    box-shadow: 0 8px 10px red;
+    box-shadow: 0 6px 6px red;
     padding-right:1.5em;
 
 }
@@ -245,7 +247,7 @@ img.fb{
 .slick-slide #price {
     color: red;
     font-size: medium;
-    font-weight: bold;
+    font-weight: medium;
 }
 
 .slick-cloned #price {
@@ -257,7 +259,7 @@ img.fb{
 
 
 #slick2, #related-products, #little-readers , #recommends, #booktok {
-    padding:2em;
+    padding:1em;
 }
 
 .slick-initialized {
@@ -299,6 +301,8 @@ img.fb{
     overflow: hidden; /* Hide overflow for neatness */
 }
 
+
+
 #top-carousel .slick-slide {
     display: flex; /* Flexbox to align slides properly */
     justify-content: center; /* Center slide content */
@@ -330,8 +334,9 @@ img.fb{
     position: relative;
     width: 100%; /* Ensure it takes full width */
     overflow: hidden; /* Hide overflow for neatness */
-    padding:2em;
-    padding-top:1em;
+        box-shadow:0 0 20px rgba(0, 0, 0, 0.8);
+        border-radius:10px;
+
 }
 
 #local-authors .slick-slide {
@@ -345,7 +350,6 @@ img.fb{
 }
 
 .category-carousel{
-    margin-left:1.75em;
     margin-bottom:0 !important;
 }
 
@@ -383,21 +387,17 @@ img.fb{
 
 .slick-next  {
     background: none;
-    font-size: 20px;
 }
 
 .slick-next::before {
     content: '▶';
-    font-size: 20px;
-    color:red;
+        color:red;
 }
 .slick-prev {
     background:none;
-    font-size:20px;
 }
 .slick-prev::before{
     content:'◀';
-    font-size:20px;
     color:red;
 }
 
@@ -707,7 +707,7 @@ footer {
 }
 
 #priceButton{
-    font-weight: bold;
+    font-weight: medium;
     width:5em;
 
 }
